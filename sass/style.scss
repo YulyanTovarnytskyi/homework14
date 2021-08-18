@@ -1,77 +1,144 @@
 
+
+@mixin but ($color:#fff, $border-radius :2px, $background :#111B47,$text-alight :center,$font-weight:500, $font-size:16px,$line-height:26px ) {
+    color: $color;
+    border-radius: $border-radius;
+    background: $background;
+    font-weight:$font-weight;
+    font-size:$font-size;
+    line-height:$line-height;
+    text-align: $text-alight;
     
-
 }
-.url>a  {
-    font-size: 14px;
-    line-height: 24px;
-    color: #505F98;
-    margin-right: 60px;
-    margin-left: 165px;
-    text-decoration: none;
+@mixin link ($colorlink:#505F98,$font-size: 14px,$line-height:24px){
 
+   font-size: $font-size;
+   line-height:$line-height;
+   color: #505F98;
+}
+
+@mixin parag  ($font-family: 'Roboto' sans-serif,$font-style:normal,$font-weight:normal, $font-size:16px,$line-height:26px)
+    {
+        font-family:$font-family;
+        font-style:$font-style;
+        font-weight:$font-weight;
+        font-size:$font-size;
+        line-height:$line-height;
     
-
-}
-.span1 {
-font-weight: 900;
-font-size: 26px;
-line-height: 38px;
-color: #37447E;
-margin-right: 355px;
-
-}
-.btn1{
-background: #111B47;
-border-radius: 2px;
-color: #FFFFFF;
 }
 
-.img{
-left: 55.16%;
-right: -22.86%;
-top: 5.29%;
-bottom: 77.85%;
+@mixin h2 ($font-family: 'Roboto' sans-serif,$font-style:normal,$font-weight:500, $font-size:36px,$line-height:46px)
+    {
+        font-family:$font-family;
+        font-style:$font-style;
+        font-weight:$font-weight;
+        font-size:$font-size;
+        line-height:$line-height;
 
+body{
+    font-family: 'Roboto', sans-serif;
 }
-.section{
+
+.container{
     display: flex;
-    justify-content:center;
-    
-
-
+    align-items: center;
+    justify-content: space-around;
 }
-.section1{
-    background-image:url('../img/Group\ \(7\).png');
-    background-position-x: right; 
-    background-repeat: no-repeat;
-    
+a{
+    @include link()
 }
-.section1>h1{
+button{
+    @include but()
+}
+
+.container2{
+    padding: 247px;
+    display: flex;
+    flex-direction: column;
+}
+.h1{
 font-weight: 500;
 font-size: 50px;
 line-height: 66px;
 letter-spacing: 1px;
-color: #091133;
+color:$colour-h;
 white-space: pre-line;
-margin-left: 164px;
-margin-top: 261px;
-
 }
-.text{
-font-size: 18px;
-line-height: 30px;
-color: #505F98;
+p{
+@include parag()
 white-space: pre-line;
-margin-left: 164px;
-
 }
-.btn2{
-border: 2px solid #091133;
-box-sizing: border-box;
+.container2>.section6>button{
+background: $background;
 border-radius: 2px;
-background: #E7ECFF;
-mix-blend-mode: normal;
-opacity: 0.5;
+border: none;
+width: 189px;
+height: 36px;
+color:$colour-button;
+
+}
+.section6{
+    margin-top: 69px;
+}
+.container2>.section6>.btn1{
+    background: $colour-button;
+    color: #111B47;
+    border: 1px solid;
+}
+header{
+    background-image: url('../img/Group\ \(7\).png');
+    background-position: right;
+    background-repeat: no-repeat;
+}
+.container3{
+    margin-left: 165px;
+    background-image: url('../img/undraw_mobile_login_ikmv.png');
+    background-position: right;
+    background-repeat: no-repeat;
+   
+   
+
+}
+.section32{
+    display: flex;
+    width:540px ;
 }
 
+.container4{
+    margin-top: 200px;
+}
+
+
+.container5{
+    display: flex;
+    justify-content: center;
+}
+}
+footer{
+    display: flex;
+    align-items: center;
+    height: 216px;
+    background: #E7ECFF;
+     padding:0 165px;
+}
+.foter1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    padding-top: 61px;
+      
+}
+.foter2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 261px;
+    margin-top: 12px;
+}
+    
+.foter-img{
+        img{
+            margin-right: 30px;
+        }
+    }
